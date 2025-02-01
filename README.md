@@ -1,3 +1,5 @@
+
+
 def sum_negative_between_min_max(arr):
     # Находим индексы минимального и максимального элементов
     min_index = arr.index(min(arr))
