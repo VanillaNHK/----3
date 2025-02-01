@@ -1,20 +1,20 @@
 Кейс-задача № 3
 
 
-def sum_negative_between_min_max(arr):
-    # Находим индексы минимального и максимального элементов
+    def sum_negative_between_min_max(arr):
+        # Находим индексы минимального и максимального элементов
     
-    min_index = arr.index(min(arr))
-    max_index = arr.index(max(arr))
+        min_index = arr.index(min(arr))
+        max_index = arr.index(max(arr))
     
-    # Определяем начальный и конечный индексы для суммирования
-    start = min(min_index, max_index)
-    end = max(min_index, max_index)
+        # Определяем начальный и конечный индексы для суммирования
+        start = min(min_index, max_index)
+        end = max(min_index, max_index)
     
-    # Суммируем отрицательные элементы между start и end
-    sum_neg = sum(x for x in arr[start+1:end] if x < 0)
+        # Суммируем отрицательные элементы между start и end
+        sum_neg = sum(x for x in arr[start+1:end] if x < 0)
     
-    return sum_neg
+        return sum_neg
     
 Пояснение к коду:
 min(arr) и max(arr): Находим минимальное и максимальное значения в массиве.
