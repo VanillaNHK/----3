@@ -16,17 +16,17 @@
 
 Код программы
 
-def sum_negative_between_min_max(arr):
-    if not arr or len(arr) < 2:
-        return 0  # Если массив пуст или состоит из одного элемента, возвращаем 0
+    def sum_negative_between_min_max(arr):
+        if not arr or len(arr) < 2:
+            return 0  # Если массив пуст или состоит из одного элемента, возвращаем 0
 
-    min_index = arr.index(min(arr))
-    max_index = arr.index(max(arr))
+        min_index = arr.index(min(arr))
+        max_index = arr.index(max(arr))
 
-    if min_index > max_index:
-        min_index, max_index = max_index, min_index  # Обеспечиваем правильный порядок
+        if min_index > max_index:
+            min_index, max_index = max_index, min_index  # Обеспечиваем правильный порядок
 
-    return sum(x for x in arr[min_index + 1:max_index] if x < 0)
+        return sum(x for x in arr[min_index + 1:max_index] if x < 0)
 
 # Пример использования
 A = [3, -1, -4, 2, -5, 7, -2, 8]
